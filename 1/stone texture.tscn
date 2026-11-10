@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cp138sola3jxi"]
+
+[ext_resource type="Texture2D" uid="uid://r3e8w1tbvf5t" path="res://pave.png" id="1_d1d13"]
+
+[node name="TextureRect" type="TextureRect" unique_id=917848208]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_d1d13")

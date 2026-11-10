@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://bpwpf2e2lgfy0"]
-
-[node name="ColorRect" type="ColorRect" unique_id=1159095149]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0, 0, 0, 1)
