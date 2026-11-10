@@ -82,13 +82,15 @@ sky_material = SubResource("PanoramaSkyMaterial_2ml5m")
 background_mode = 2
 sky = SubResource("Sky_1ejxq")
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_q86lo"]
+
 [node name="Scene" type="Node3D" unique_id=323177151]
 transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 0, 0, 0)
 
 [node name="solaire" type="AnimatedSprite3D" parent="." unique_id=1811586482]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.19875711, 0)
 sprite_frames = SubResource("SpriteFrames_u3cyc")
-frame_progress = 0.72464883
+frame_progress = 0.2500001
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=9683749]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -5.053711, 0)
@@ -112,5 +114,12 @@ environment = SubResource("Environment_q86lo")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=360499734]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5207974, 0.5355756, 5.6756926)
 
-[node name="Camera1" type="Camera3D" parent="." unique_id=1966282147]
-transform = Transform3D(-0.78375643, -0.030253068, 0.6203312, 0.04653318, 0.993145, 0.10722719, -0.6193227, 0.11290597, -0.776976, 1.6369655, 0.8055923, -1.5066214)
+[node name="Node3D" type="Node3D" parent="." unique_id=526230992]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=20641973]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.33186468, 0.15417826, -1.2385358)
+visible = false
+mesh = SubResource("CapsuleMesh_q86lo")
+
+[node name="Camera1" type="Camera3D" parent="Node3D/MeshInstance3D" unique_id=1966282147]
+transform = Transform3D(-0.7837564, -0.030253053, 0.62033105, 0.046533182, 0.99314505, 0.10722716, -0.61932266, 0.11290596, -0.7769759, 0, 0, 0)
